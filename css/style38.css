@@ -1,0 +1,335 @@
+/* Reset & Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333333;
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ================== TOP HERO SECTION ================== */
+.showcase-area {
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+    padding: 80px 40px;
+    display: flex;
+    align-items: center;
+}
+
+/* Curved background shape */
+.background-curve {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 55%;
+    height: 100%;
+    background-color: #F4F4F4;
+    border-bottom-right-radius: 200px;
+    z-index: 1;
+}
+
+.showcase-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+
+/* --- LEFT COLUMN --- */
+.left-panel {
+    flex: 1;
+    max-width: 550px;
+}
+
+.heading-primary {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #333333;
+    margin-bottom: 25px;
+    letter-spacing: -1px;
+}
+
+.highlight-green {
+    color: #45782B;
+}
+
+.description-main {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555555;
+    margin-bottom: 40px;
+}
+
+/* Stats Area */
+.metrics-group {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.metric-box h4 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #222222;
+    margin-bottom: 8px;
+}
+
+.line-mini {
+    width: 30px;
+    height: 2px;
+    background-color: #CCCCCC;
+    margin-bottom: 10px;
+}
+
+.metric-box p {
+    font-size: 0.85rem;
+    color: #777777;
+    line-height: 1.4;
+}
+
+/* Primary Button */
+.btn-primary-green {
+    display: inline-block;
+    background-color: #4A7A30;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 18px 45px;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 10px 20px rgba(74, 122, 48, 0.2);
+}
+
+.btn-primary-green:hover {
+    background-color: #386024;
+    transform: translateY(-2px);
+}
+
+
+/* --- RIGHT COLUMN --- */
+.right-panel {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-left: 20px;
+}
+
+/* Circular Stamp */
+.rotating-badge {
+    position: absolute;
+    top: -50px;
+    right: 20px;
+    width: 110px;
+    height: 110px;
+    z-index: 10;
+}
+
+.rotating-text {
+    width: 100%;
+    height: 100%;
+    animation: spinBadge 15s linear infinite;
+}
+
+@keyframes spinBadge {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.badge-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+}
+
+.badge-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Plants Image */
+.image-container {
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(40px);
+}
+
+.image-main {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    z-index: 5;
+    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.1));
+}
+
+
+/* ================== FEATURES SECTION ================== */
+.cards-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 40px 40px 80px 40px;
+    position: relative;
+    z-index: 10;
+}
+
+.card-item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 25px 25px;
+    position: relative;
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-bottom: 1px solid #4A4A4A;
+    border-right: 1px solid #4A4A4A;
+}
+
+.card-item::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 20px;
+    height: 20px;
+    border-top: 1px solid #4A4A4A;
+    border-left: 1px solid #4A4A4A;
+    border-top-left-radius: 15px;
+}
+
+.card-item::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    box-shadow: inset -2px -2px 0px #fff;
+    border-bottom-right-radius: 15px;
+}
+
+.icon-wrapper {
+    width: 70px;
+    height: 70px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #F8F8F8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-wrapper img {
+    width: 85%;
+    height: 85%;
+    object-fit: contain;
+}
+
+.card-item p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #555555;
+}
+
+
+/* ================== RESPONSIVE ================== */
+
+@media (max-width: 1024px) {
+    .background-curve {
+        width: 100%;
+        height: 60%;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+    }
+
+    .showcase-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 60px;
+    }
+
+    .left-panel {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .metrics-group {
+        justify-content: center;
+    }
+
+    .rotating-badge {
+        top: 0;
+        right: 0px;
+    }
+
+    .cards-section {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 700px) {
+    .showcase-area {
+        padding: 50px 20px;
+    }
+
+    .heading-primary {
+        font-size: 2.5rem;
+    }
+
+    .metrics-group {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .line-mini {
+        margin: 5px auto 10px auto;
+    }
+
+    .image-container {
+        transform: translateY(0);
+    }
+
+    .cards-section {
+        padding: 20px 20px 60px 20px;
+        gap: 20px;
+    }
+
+    .card-item {
+        flex-direction: column;
+        text-align: center;
+    }
+}
