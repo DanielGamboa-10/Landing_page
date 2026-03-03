@@ -72,3 +72,13 @@ Posibles mejoras del proyecto:
 - Implementación de animaciones con CSS.
 - Integración futura de JavaScript para interacción.
 - Conversión a estructura basada en componentes.
+
+
+
+
+
+
+
+**ENALCE REPOSITORIO GLOBAL**
+
+https://github.com/castillokfirex/actvidad3_landing_page_final.git
